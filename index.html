@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <!-- Splash Screen: This section displays a splash screen at the beginning -->
+    <div id="splashScreen">
+        <iframe src="/public/splash.html" frameborder="0" style="width: 100%; height: 100vh;"></iframe>
+    </div>
+
+    <!-- Header Section: Contains the website's main heading and navigation links -->
+    <header class="main" id="background">
+        <div class="header-container">
+            <!-- Main heading of the website -->
+            <a href="/public/index.html"><h1 id="top_heading">Graphic Learning</h1></a>
+            <!-- Navigation menu -->
+            <nav>
+                <ul>
+                    <li><a href="/public/index.html">Home</a></li>
+                    <li><a href="/public/about_us.html">About</a></li>
+                    <li><a href="/public/LogIN/index.html">Log In / Sign Up</a></li>
+                    <li><a href="/public/FAQ.html">FAQs</a></li>
+                    <li><a href="/public/ContactUs.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section: Contains welcome text, featured videos, and course list -->
+    <main class="main">
+        <!-- Welcome Section: Introduction and description of the website -->
+        <section>
+            <h2 class="text">Welcome to E-Learning</h2>
+            <p class="text">This is a web application designed to help children aged 3-5 learn through videos, interactive activities, and more!</p>
+            <p class="text">Explore our courses and educational content to engage young learners and foster a love for learning.</p>
+        </section>
+
+        <!-- Featured Videos Section: Displays a list of featured videos -->
+        <section id="videoList" class="scrollable-container">
+            <!-- Individual video items. Change the iframe src to update the video -->
+            <div class="video-item">
+                <video class="hover-video" src="/public/Videos/BODY PARTS.mp4"  height="240" width="320" ></video>
+            </div>
+            <div class="video-item">
+                <video class="hover-video" src="/public/Videos/Let’s study rhyming words.mp4"  height="240" width="320" ></video>
+            </div>
+            <div class="video-item">
+                <video class="hover-video" src="/public/Videos/ORGANS.mp4"  height="240" width="320" ></video>
+            </div>
+            <div class="video-item">
+                <video class="hover-video" src="/public/Videos/Traffic Rules.mp4"  height="240" width="320" ></video>
+            </div>
+            <div class="video-item">
+                <video class="hover-video" src="/public/Videos/Good Habits.mp4"  height="240" width="320" ></video>
+            </div>
+        </section>
+
+        <!-- Courses Section: Lists the available courses with clickable links -->
+        <section>
+            <h1 class="text"><b>Courses</b></h1>
+            <ul class="text" id="courseList">
+                <!-- List of courses with click event to switch tabs -->
+                <li><a href="#nursery" onclick="switchTab('nursery')">Nursery</a></li>
+                <li><a href="#lkg" onclick="switchTab('lkg')">LKG</a></li>
+                <li><a href="#ukg" onclick="switchTab('ukg')">UKG</a></li>
+                <li><a href="#first-class" onclick="switchTab('first-class')">1st Class</a></li>
+            </ul>
+        </section>
+
+        <!-- Course Content Tabs: Each section contains content for the selected course -->
+        <section id="courseContent">
+            <div id="nursery" class="course-tab" style="display: none;">
+                <h2 class="text">Nursery Course</h2>
+                <p class="text">List of Videos.</p>
+                <ul>
+                    <li><a href="/public/courses/nursery/maths.html" target="_main">Maths</a></li>
+                    <li><a href="/public/courses/nursery/english.html" target="_main">English</a></li>
+                    <li><a href="/public/courses/nursery/evs.html" target="_main">Evs</a></li>
+                </ul>
+            </div>
+            <div id="lkg" class="course-tab" style="display: none;">
+                <h2 class="text">LKG Course</h2>
+                <p class="text">List of Videos.</p>
+                <ul>
+                    <li><a href="/public/courses/lkg/maths.html" target="_main">Maths</a></li>
+                    <li><a href="/public/courses/lkg/english.html" target="_main">English</a></li>
+                    <li><a href="/public/courses/lkg/evs.html" target="_main">Evs</a></li>
+                </ul>
+            </div>
+            <div id="ukg" class="course-tab" style="display: none;">
+                <h2 class="text">UKG Course</h2>
+                <p class="text">List of Videos.</p>
+                <ul>
+                    <li><a href="/public/courses/ukg/maths.html" target="_main">Maths</a></li>
+                    <li><a href="/public/courses/ukg/english.html" target="_main">English</a></li>
+                    <li><a href="/public/courses/ukg/evs.html" target="_main">Evs</a></li>
+                </ul>
+            </div>
+            <div id="first-class" class="course-tab" style="display: none;">
+                <h2 class="text">1st Class Course</h2>
+                <p class="text">List of Videos.</p>
+                <ul>
+                    <p><h1>Coming Soon</h1></p>
+                </ul>
+        </section>
+    </main>
+
+    <!-- Footer Section: Displays the footer content -->
+    <footer class="main">
+        <p>&copy; 2024 E-Learning. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to the JavaScript file -->
+    <script src="/public/script.js"></script>
+</body>
+</html>

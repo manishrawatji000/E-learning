@@ -1,0 +1,58 @@
+//html
+<button id="openPopup">Select Gender</button>
+
+        <div id="popup" class="popup" style="background-image: url(three.webp);color: white;">
+            <div class="popup-content">
+            <h2>Select Your Gender</h2>
+            <img src="boy.webp" alt="Male Cartoon" id="male" class="gender-option">
+            <img src="girl.webp" alt="Female Cartoon" id="female" class="gender-option">
+            </div>
+        </div>
+//css
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .popup-content {
+    text-align: center;
+  }
+  
+  .gender-option {
+    width: 100px;
+    cursor: pointer;
+    margin: 10px;
+  }
+//java_script
+document.querySelectorAll('.gender-option').forEach(function(option) {
+  option.addEventListener('mouseenter', function() {
+    var gender = this.id;
+    if (gender === 'male') {
+      document.getElementById('female').style.opacity = '0.5';
+    } else {
+      document.getElementById('male').style.opacity = '0.5';
+    }
+    this.style.opacity = '1';
+    this.style.transform = 'scale(1.2)'; // Increase size when hovered over
+  });
+
+  option.addEventListener('mouseleave', function() {
+    document.querySelectorAll('.gender-option').forEach(function(option) {
+      option.style.opacity = '1';
+      option.style.transform = 'scale(1)'; // Reset size when mouse leaves
+    });
+  });
+
+  option.addEventListener('click', function() {
+    var gender = this.id;
+    alert("You selected: " + gender); // You can perform any other action here
+    document.getElementById('popup').style.display = 'none';
+  });
+});

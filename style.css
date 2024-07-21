@@ -1,0 +1,177 @@
+/* Basic Reset and Flexbox Setup for the entire document */
+body {
+    font-family: 'Open Sans', sans-serif; /* Sets the font for the entire page */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #F7F7F7; /* Soft, creamy white background */
+}
+
+header {
+    background-color: #1c181d; /* Warm, sunny yellow background */
+    color: white;
+    padding: 10px 20px;
+    text-align: center; /* Centers the text */
+}
+/* Container for Header Content: Flexbox layout for spacing between elements */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Spaces out the content within the header */
+    align-items: center;
+}
+
+/* Main Heading Styling: Center the main heading */
+#top_heading {
+    font-size: 40px;
+    margin: 0;
+    flex-grow: 1; /* Allow the heading to grow and center itself */
+    text-align: center; /* Centers the heading text */
+    font-weight: bold; /* Makes the heading bold */
+    color: #ffffff; /* Fun, bright green color */
+}
+
+/* Navigation Styling: Styles for the navigation menu */
+nav ul {
+    list-style-type: none; /* Removes bullets from the list */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Displays list items in a row */
+    gap: 10px; /* Adds space between navigation items */
+}
+
+nav ul li {
+    display: inline; /* Displays list items inline */
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: white;
+    padding: 5px 10px; /* Adds padding to links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+    background-color: #593949; /* Vibrant, pinkish-purple background on hover */
+    color: white; /* Text color on hover */
+}
+
+/* Main Content Styling: Padding for the main content */
+.main {
+    padding: 20px;
+    flex: 1;
+}
+
+.text {
+    text-align: center; /* Centers the text */
+    margin-bottom: 40px;
+}
+
+/* Horizontal Scrolling for Videos: Enables horizontal scrolling */
+.scrollable-container {
+    overflow-x: auto; /* Allows horizontal scrolling */
+    white-space: nowrap; /* Keeps items on one line */
+    margin-bottom: 20px; /* Adds space below the video section */
+}
+
+/* Styling for Each Video Item: Sets width and margin */
+.video-item{
+    display: inline-block;
+    width: 320px; /* Width of each video item */
+    margin-right: 20px; /* Space between video items */
+    vertical-align: top; /* Aligns items to the top */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 10px; /* Space below each video */
+}
+
+.video-icon {
+    font-size: 24px; /* Icon size */
+    color: #FFC107; /* Warm, sunny yellow color */
+    margin-left: 10px; /* Space between icon and video title */
+}
+
+/* Course List Styling: Centers the course list */
+#courseList {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between course items */
+    list-style-type: none; /* Removes bullets from the list */
+    padding: 10;
+    margin: 30px 0; /* Space above and below the course list */
+}
+
+#courseList li a {
+    text-decoration: none; /* Removes underline from links */
+    color: #34A85A; /* Fun, bright green color */
+    padding: 10px 20px; /* Padding for links */
+    border: 1px solid #34A85A; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+#courseList li a:hover {
+    background-color: #FF69B4; /* Vibrant, pinkish-purple background on hover */
+    color: white; /* Text color on hover */
+}
+
+/* Course Content Section Styling */
+#courseContent {
+    margin-top: 20px; /* Add some space above the course content */
+}
+
+.course-tab {
+    display: none; /* Hide course content tabs by default */
+}
+
+.course-tab.active {
+    display: block; /* Display active course content tab */
+}
+
+.course-tab h2 {
+    text-align: center; /* Center-align course titles */
+    color: #813588; /* Fun, bright green color */
+}
+
+.course-tab p {
+    text-align: center; /* Center-align text content */
+    color: #333; /* Dark text color */
+}
+
+.course-tab ul {
+    list-style-type: none; /* Remove bullets from the list */
+    padding: 0;
+    text-align: center; /* Center-align list items */
+}
+
+.course-tab ul li {
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+.course-tab ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #007bff; /* Blue link color */
+    transition: color 0.3s; /* Smooth transition for link color */
+}
+
+.course-tab ul li a:hover {
+    color: #0056b3; /* Darker blue color on hover */
+}
+
+/* Footer Styling: Styles for the footer */
+footer {
+    background-color: #333; /* Dark gray background */
+    color: white;
+    text-align: center; /* Centers the footer text */
+    padding: 10px;
+    position: relative; /* Keeps the footer at the bottom */
+    bottom: 0;
+    width: 97.38%; /* Ensures the footer spans the width of the page */
+}
